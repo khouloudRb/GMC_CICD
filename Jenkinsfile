@@ -14,7 +14,7 @@ pipeline {
                 docker { image 'khouloud123456/frontend:2' }
             }
             steps {
-                echo 'build front'
+                echo 'build frontend1'
             }
         }
     }
