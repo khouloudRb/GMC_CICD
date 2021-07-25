@@ -6,7 +6,7 @@ pipeline {
                 docker { image 'khouloud123456/backend:1' }
             }
             steps {
-                echo 'build back'
+                echo 'build back1'
             }
         }
         stage('Front-end') {
