@@ -17,5 +17,12 @@ pipeline {
                 echo 'build frontend2'
             }
         }
+        post {
+        always {
+            emailext body: '''$DEFAULT_CONTENT''',
+            recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
+            subject: '''$DEFAULT_SUBJECT'''
+        }
+    }
     }
 }
